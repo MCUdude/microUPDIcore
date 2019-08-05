@@ -1,0 +1,23 @@
+microupdi.name=microUPDI Firmware Uploader
+
+microupdi.upload.tool=avrdude
+microupdi.upload.protocol=avr109
+microupdi.upload.maximum_size=28672
+microupdi.upload.maximum_data_size=2560
+microupdi.upload.speed=57600
+microupdi.upload.disable_flushing=true
+microupdi.upload.use_1200bps_touch=true
+microupdi.upload.wait_for_upload_port=true
+
+microupdi.bootloader.tool=arduino:avrdude
+microupdi.bootloader.low_fuses=0xff
+microupdi.bootloader.high_fuses=0xd8
+microupdi.bootloader.extended_fuses=0xcb
+microupdi.bootloader.unlock_bits=0x3F
+microupdi.bootloader.lock_bits=0x2F
+
+microupdi.build.mcu=atmega32u4
+microupdi.build.f_cpu=16000000L
+microupdi.build.board=AVR_MICRO
+microupdi.build.core=arduino:arduino
+microupdi.build.variant=arduino:micro
