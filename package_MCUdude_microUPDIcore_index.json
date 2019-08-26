@@ -1,0 +1,30 @@
+{
+  "packages": [
+    {
+      "name": "microUPDIcore",
+      "maintainer": "MCUdude",
+      "websiteURL": "https://github.com/MCUdude/microUPDIcore",
+      "email": "",
+      "help": {
+        "online": ""
+      },
+      "platforms": [
+        {
+          "name": "microUPDIcore",
+          "architecture": "avr",
+          "version": "1.0.0",
+          "category": "Contributed",
+          "url": "https://MCUdude.github.io/microUPDIcore/microUPDIcore-1.0.0.tar.bz2",
+          "archiveFileName": "microUPDIcore-1.0.0.tar.bz2",
+          "checksum": "SHA-256:d0079e55a786639e1352abdb919d3c4a96971893c50a4f3094df71978f392121",
+          "size": "33575",
+          "boards": [
+            {"name": "microUPDI Firmware Uploader"}
+          ],
+          "toolsDependencies": []
+        }
+      ],
+      "tools": []
+    }
+  ]
+}
