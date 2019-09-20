@@ -28,7 +28,7 @@ SET EFUSE=0xC6
 
 :: File spesific
 SET FLASH_FILE=../mEDBG_UPDI_1.13.hex
-SET EEPROM_FILE=../mEDBG_UPDI_1.13.eep
+SET EEPROM_FILE=../mEDBG_UPDI_1.13_modified_suffer.eep
 
 @ECHO on
 

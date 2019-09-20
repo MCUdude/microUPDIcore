@@ -18,7 +18,7 @@
 #################################################################################################
 
 # Modify these to set correct Avrdude path, programmer type and flags
-AVRDUDE_PATH="/usr/bin/avrdude"
+AVRDUDE_PATH="/path/to/avrdude"
 AVRDUDE_CONF_PATH="/path/to/avrdude.conf"
 PROGRAMMER="usbasp"
 EXTRA_FLAGS="-Pusb"
@@ -31,7 +31,7 @@ EFUSE="0xC6"
 
 # File spesific
 FLASH_FILE="../mEDBG_UPDI_1.13.hex"
-EEPROM_FILE="../mEDBG_UPDI_1.13.eep"
+EEPROM_FILE="../mEDBG_UPDI_1.13_modified_suffer.eep"
 
 # Avrdude command
 $AVRDUDE_PATH -C$AVRDUDE_CONF_PATH -p$TARGET -c$PROGRAMMER $EXTRA_FLAGS -e -Uhfuse:w:$HFUSE:m -Ulfuse:w:$LFUSE:m -Uefuse:w:$EFUSE:m -Ueeprom:w:$EEPROM_FILE -Uflash:w:$FLASH_FILE 

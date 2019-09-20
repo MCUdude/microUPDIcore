@@ -9,7 +9,7 @@ readonly serialPort="$5"
 readonly uploadSpeed="$6"
 readonly runtimePlatformPath="$7"
 
-if "${avrdudePath}" "-C$configPath" -v "-p$buildMCU" "-c$uploadProtocol" "-P$serialPort" "-b$uploadSpeed" -D "-Ueeprom:w:$runtimePlatformPath/firmwares/mEDBG_UPDI_1.13.eep:i" "-Uflash:w:$runtimePlatformPath/firmwares/mEDBG_UPDI_1.13.hex:i" 2>&1 | tee /dev/stderr | grep --silent "verification error, first mismatch at byte 0x7000"; then
+if "${avrdudePath}" "-C$configPath" -v "-p$buildMCU" "-c$uploadProtocol" "-P$serialPort" "-b$uploadSpeed" -D "-Ueeprom:w:$runtimePlatformPath/firmwares/mEDBG_UPDI_1.13_modified_suffer.eep:i" "-Uflash:w:$runtimePlatformPath/firmwares/mEDBG_UPDI_1.13.hex:i" 2>&1 | tee /dev/stderr | grep --silent "verification error, first mismatch at byte 0x7000"; then
   # The failure was caused by the expected verification error at 0x7000 so don't report an upload error
   finalExitStatus=0
   # It's necessary to have a short delay here, otherwise the note below gets mixed in with the avrdude output in the Arduino IDE console
