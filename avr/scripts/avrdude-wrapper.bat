@@ -15,7 +15,7 @@ set runtimePlatformPath=%~7
 set buildPath=%~8
 
 REM Run the avrdude command and redirect all output to a text file (necessary in order to both display the output on the console and run findstr on it)
-"%avrdudePath%" "-C%configPath%" -v -p%buildMCU% -c%uploadProtocol% "-P%serialPort%" -b%uploadSpeed% -D "-Ueeprom:w:%runtimePlatformPath%/firmwares/mEDBG_UPDI_1.13_modified_suffer.eep:i" "-Uflash:w:%runtimePlatformPath%/firmwares/mEDBG_UPDI_1.13.hex:i"> "%buildPath%/avrdudeoutput.txt" 2>&1
+"%avrdudePath%" "-C%configPath%" -v -p%buildMCU% -c%uploadProtocol% "-P%serialPort%" -b%uploadSpeed% -D "-Ueeprom:w:%runtimePlatformPath%/firmwares/mEDBG_UPDI_1.13_modified_suffer.eep:i" "-Uflash:w:%runtimePlatformPath%/firmwares/mEDBG_UPDI_1.13_AREF_fix.hex:i"> "%buildPath%/avrdudeoutput.txt" 2>&1
 
 set finalExitStatus=%errorlevel%
 
