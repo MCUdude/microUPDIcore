@@ -25,9 +25,9 @@ EXTRA_FLAGS="-Pusb"
 
 # Target spesific
 TARGET="atmega32u4"
-HFUSE="0x99"
-LFUSE="0x1E"
-EFUSE="0xC6"
+HFUSE="0xFF"
+LFUSE="0xD8"
+EFUSE="0xCB"
 
 # File spesific
 FLASH_FILE="../mEDBG_UPDI_1.13_AREF_fix.hex"
