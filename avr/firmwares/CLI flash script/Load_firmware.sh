@@ -25,8 +25,8 @@ EXTRA_FLAGS="-Pusb"
 
 # Target spesific
 TARGET="atmega32u4"
-HFUSE="0xFF"
-LFUSE="0xD8"
+HFUSE="0xD8"
+LFUSE="0xFF"
 EFUSE="0xCB"
 
 # File spesific

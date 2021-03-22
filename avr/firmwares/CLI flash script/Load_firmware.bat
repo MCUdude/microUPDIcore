@@ -22,8 +22,8 @@ SET EXTRA_FLAGS=-Pusb
 
 :: Target spesific
 SET TARGET=atmega32u4
-SET HFUSE=0xFF
-SET LFUSE=0xD8
+SET HFUSE=0xD8
+SET LFUSE=0xFF
 SET EFUSE=0xCB
 
 :: File spesific
