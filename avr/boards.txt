@@ -9,12 +9,15 @@ microupdi.upload.disable_flushing=true
 microupdi.upload.use_1200bps_touch=true
 microupdi.upload.wait_for_upload_port=true
 
+
 microupdi.bootloader.tool=arduino:avrdude
 microupdi.bootloader.low_fuses=0xff
 microupdi.bootloader.high_fuses=0xd8
 microupdi.bootloader.extended_fuses=0xcb
 microupdi.bootloader.unlock_bits=0x3F
 microupdi.bootloader.lock_bits=0x2F
+microupdi.bootloader.file=Caterina-Leonardo.hex
+
 
 microupdi.build.mcu=atmega32u4
 microupdi.build.f_cpu=16000000L
