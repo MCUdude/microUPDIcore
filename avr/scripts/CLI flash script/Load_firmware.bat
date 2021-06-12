@@ -27,7 +27,7 @@ SET LFUSE=0xFF
 SET EFUSE=0xCB
 
 :: File spesific
-SET FLASH_FILE=../mEDBG_UPDI_1.13_AREF_fix.hex
+SET FLASH_FILE=../mEDBG_UPDI_1.13_no_bootloader.hex
 SET EEPROM_FILE=../mEDBG_UPDI_1.13_modified_suffer.eep
 
 @ECHO on
