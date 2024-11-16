@@ -30,8 +30,8 @@ LFUSE="0xFF"
 EFUSE="0xCB"
 
 # File spesific
-FLASH_FILE="../mEDBG_UPDI_1.13_no_bootloader.hex"
-EEPROM_FILE="../mEDBG_UPDI_1.13_modified_suffer.eep"
+FLASH_FILE="../mEDBG_UPDI.hex"
+EEPROM_FILE="../mEDBG_UPDI.eep"
 
 # Avrdude command
 $AVRDUDE_PATH -C$AVRDUDE_CONF_PATH -p$TARGET -c$PROGRAMMER $EXTRA_FLAGS -e -Uhfuse:w:$HFUSE:m -Ulfuse:w:$LFUSE:m -Uefuse:w:$EFUSE:m -Ueeprom:w:$EEPROM_FILE -Uflash:w:$FLASH_FILE
