@@ -4,10 +4,10 @@
 ## Created by MCUdude for flashing mEDBG UPDI firmware onto Arduino Pro Micro boards           ##
 ## https://github.com/MCUdude/microUPDI                                                        ##
 ##                                                                                             ##
-## Recommended way to flash the mEDBG firmware is through Arduino IDE. Note that by using this ##
-## script you're replacing the bootloader with Atmels DFU bootloader. This means you'll no     ##
-## longer be able to upgrade the mEDBG firmware through Arduino IDE. However, you may use this ##
-## script or Atmel Studio 7.                                                                   ##
+## Recommended way to flash the mEDBG firmware is through Arduino IDE. Note that this script   ##
+## performs a chip erase, which also removes the bootloader of your 32U4 board. The firmware   ##
+## file does not contain a bootloader, so afterwards the board can only be flashed with an ISP ##
+## programmer, e.g. with this script, or by burning a bootloader again first.                  ##
 ##                                                                                             ##
 ## Execute ./Load_firmware.sh to run this script from your terminal                            ##
 ## Run $ chmod +x Load_firmware.sh if this script isn't executable.                            ##
@@ -25,13 +25,13 @@ EXTRA_FLAGS="-Pusb"
 
 # Target spesific
 TARGET="atmega32u4"
-HFUSE="0xD8"
+HFUSE="0xD9"
 LFUSE="0xFF"
 EFUSE="0xCB"
 
 # File spesific
-FLASH_FILE="../mEDBG_UPDI.hex"
-EEPROM_FILE="../mEDBG_UPDI.eep"
+FLASH_FILE="../../firmwares/mEDBG_UPDI.hex"
+EEPROM_FILE="../../firmwares/mEDBG_UPDI.eep"
 
 # Avrdude command
-$AVRDUDE_PATH -C$AVRDUDE_CONF_PATH -p$TARGET -c$PROGRAMMER $EXTRA_FLAGS -e -Uhfuse:w:$HFUSE:m -Ulfuse:w:$LFUSE:m -Uefuse:w:$EFUSE:m -Ueeprom:w:$EEPROM_FILE -Uflash:w:$FLASH_FILE
+$AVRDUDE_PATH -C$AVRDUDE_CONF_PATH -p$TARGET -c$PROGRAMMER $EXTRA_FLAGS -e -Uhfuse:w:$HFUSE:m -Ulfuse:w:$LFUSE:m -Uefuse:w:$EFUSE:m -Ueeprom:w:$EEPROM_FILE:i -Uflash:w:$FLASH_FILE:i
